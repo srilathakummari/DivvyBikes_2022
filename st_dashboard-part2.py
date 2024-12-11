@@ -9,6 +9,7 @@ from keplergl import KeplerGl
 from datetime import datetime as dt
 from numerize.numerize import numerize
 from PIL import Image
+import os
 
 ########################### Initial settings for the dashboard ####################################################
 
@@ -41,9 +42,12 @@ if page == "Intro page":
     st.markdown("- Interactive map with aggregated bike trips")
     st.markdown("- Recommendations")
     st.markdown("The dropdown menu on the left 'Aspect Selector' will take you to the different aspects of the analysis our team looked at.")
+
+    image_path = os.path.join(os.getcwd(), "img", "Intropageimage.jpg")
     
-    myImage = Image.open("Intropageimage.jpg") 
+    myImage = Image.open(image_path) 
     st.image(myImage)
+
 
 
     ### Create the dual axis line chart page ###
@@ -132,9 +136,10 @@ elif page == 'Most popular stations':
 #     st.markdown("The most common routes (>2,000) are between Washington St, Sip Ave, Madison St & 1 St, Marin Light Rail, Newport Pkwy, which are predominantly located along the water.")
 
 else:
-    
+
+    image_path = os.path.join(os.getcwd(), "img", "recommendation.png")
     st.header("Conclusions and recommendations")
-    bikes = Image.open("recommendation.png")  #source: Midjourney
+    bikes = Image.open(image_path)  #source: Midjourney
     st.image(bikes)
     st.markdown("### Our analysis has shown that Divvy Bikes should focus on the following objectives moving forward:")
     st.markdown("- Add more stations to the locations around the water line, such as Washington St, Sip Ave, Madison St & 1 St, Marin Light Rail, Newport Pkwy")
