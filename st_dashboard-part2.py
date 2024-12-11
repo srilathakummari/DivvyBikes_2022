@@ -25,8 +25,8 @@ page = st.sidebar.selectbox('Select an aspect of the analysis',
 
 ########################## Import data ###########################################################################################
 
-df = pd.read_csv('/users/gideon/DivvyBikes_2022/Data/reduced_data_to_plot_7.csv', index_col = 1)
-top20 = pd.read_csv('/users/gideon/DivvyBikes_2022/Data/top20.csv', index_col = 2)
+df = pd.read_csv('Data/reduced_data_to_plot_7.csv', index_col = 1)
+top20 = pd.read_csv('Data/top20.csv', index_col = 2)
 
 ######################################### DEFINE THE PAGES #####################################################################
 
@@ -42,7 +42,7 @@ if page == "Intro page":
     st.markdown("- Recommendations")
     st.markdown("The dropdown menu on the left 'Aspect Selector' will take you to the different aspects of the analysis our team looked at.")
     
-    myImage = Image.open("/users/gideon/DivvyBikes_2022/Intropageimage.jpg") 
+    myImage = Image.open("Intropageimage.jpg") 
     st.image(myImage)
 
 
@@ -117,7 +117,7 @@ elif page == 'Most popular stations':
 
 #     st.write("Interactive map showing aggregated bike trips over New York")
 
-#     path_to_html = "/users/gideon/DivvyBikes_2022/kepler_map.html" 
+#     path_to_html = "kepler_map.html" 
 
 #     # Read file and keep in variable
 #     with open(path_to_html,'r') as f: 
@@ -134,7 +134,7 @@ elif page == 'Most popular stations':
 else:
     
     st.header("Conclusions and recommendations")
-    bikes = Image.open("/users/gideon/DivvyBikes_2022/recommendation.png")  #source: Midjourney
+    bikes = Image.open("recommendation.png")  #source: Midjourney
     st.image(bikes)
     st.markdown("### Our analysis has shown that Divvy Bikes should focus on the following objectives moving forward:")
     st.markdown("- Add more stations to the locations around the water line, such as Washington St, Sip Ave, Madison St & 1 St, Marin Light Rail, Newport Pkwy")
