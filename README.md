@@ -7,3 +7,5 @@
 - To enrich this data set, I gathered weather data using NOAA’s API service and merged these 2 datasets to to gain the valuable resources for predicting and evaluating the bike ride patterns under different temperatures. 
 - I used Python libraries, pandas, numpy, requests, json.
 
+I have deployed the dashboard using Streamlit. The link to access the application is below:
+https://divvybikes2022-g6lthur7j2najzyqe2t49r.streamlit.app/
